@@ -1,6 +1,5 @@
 #!/bin/bash
 python delete_migrations.py
-cd backend
 python manage.py makemigrations
 python manage.py migrate
 echo Loading data for teams...
