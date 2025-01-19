@@ -5,6 +5,7 @@ class Team(models.Model):
     franchise_id = models.IntegerField(null=True)
     name = models.CharField(max_length=50, null=True)
     # logo = models.ImageField(upload_to="images/team-logo", null=True)
+    logo = models.CharField(max_length=200, null=True)
     conference = models.CharField(max_length=50, null=True)
     division = models.CharField(max_length=50, null=True)
     start_season = models.IntegerField(null=True)
