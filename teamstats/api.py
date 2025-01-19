@@ -23,9 +23,9 @@ class TeamSchema(ModelSchema):
 @team_router.get("/", response=TeamSchema)
 def get_team(request, team: Union[int, str]):
     kwargs = {}
-    if type(team) is int:
-        kwargs["pk"] = team
-    elif type(team) is str:
+    try: 
+        kwargs["pk"] = int(team)
+    except ValueError:
         team = team.replace("-", " ").replace("%20", " ").title()
         kwargs["name"] = team
     return get_object_or_404(Team.objects.get(**kwargs))

@@ -1,5 +1,5 @@
 from ninja import ModelSchema, Router, Field, Schema
-from typing import List, Union
+from typing import List, Union, Optional
 from django.shortcuts import get_object_or_404, get_list_or_404
 
 from .models import Player
@@ -12,7 +12,7 @@ player_router = Router()
 class PlayerSchema(ModelSchema):
     # position: List[PlayerPositionSchema]
     position: list[str] = Field(..., alias="position")
-    team: SimpleTeamSchema = None
+    team: Optional[SimpleTeamSchema] = None
     class Config:
         model = Player
         model_fields = [
@@ -53,10 +53,10 @@ class PlayerNameSchema(Schema):
 # passed ints can be converted to str so do int first to preserve type
 def get_player(request, player: Union[int, str]):
     kwargs = {}
-    if type(player) is int:
-        kwargs["pk"] = player
-    elif type(player) is str:
-        kwargs["slug"] = player
+    try:
+        kwargs["pk"] = int(player)
+    except ValueError:
+        kwargs["full_name"] = player
     return Player.objects.get(**kwargs)
 
 
