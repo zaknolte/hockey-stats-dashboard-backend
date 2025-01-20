@@ -114280,5 +114280,47 @@
             "faceoff_percent": 0.45593,
             "save_percent": 0.082987012987013
         }
+    },
+    {
+        "model": "seasonstats.teamregularseason",
+        "pk": 685,
+        "fields": {
+            "team": 59,
+            "season": 20232024,
+            "games_played": 45,
+            "wins": 19,
+            "home_wins": 7,
+            "away_wins": 12,
+            "losses": 19,
+            "home_losses": 11,
+            "away_losses": 8,
+            "overtime_losses": 7,
+            "home_overtime_losses": 4,
+            "away_overtime_losses": 3,
+            "points": 45,
+            "goals": 127,
+            "goals_per_game": 3.0952380952380953,
+            "goals_against": 77,
+            "goals_against_per_game": 2.822222222222222,
+            "goals_pp": 13,
+            "goals_against_pp": 4,
+            "goals_sh": 2,
+            "goals_against_sh": 23,
+            "pp_chances": 79,
+            "penalty_minutes": 256,
+            "penalties_taken": 100,
+            "pp_percent": 0.16455,
+            "pk_percent": 0.70129,
+            "shots": 653,
+            "shots_per_game": 31.09523,
+            "shots_against": 639,
+            "shots_against_per_game": 30.42857,
+            "shot_percent": 0.10046153846153846,
+            "faceoffs_taken": 1180,
+            "faceoffs_won": 538,
+            "faceoffs_lost": 642,
+            "faceoff_percent": 0.45593,
+            "save_percent": 0.082987012987013
+        }
     }
 ]

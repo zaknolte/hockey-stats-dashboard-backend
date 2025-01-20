@@ -926,5 +926,21 @@
             "state": "WA",
             "venue": "Climate Pledge Arena"
         }
+    },
+    {
+        "model": "teamstats.team",
+        "fields": {
+            "team_id": 59,
+            "franchise_id": 40,
+            "name": "Utah Hockey Club",
+            "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg",
+            "conference": "Western",
+            "division": "Central",
+            "start_season": 20232024,
+            "final_season": null,
+            "city": "Salt Lake City",
+            "state": "UT",
+            "venue": "Delta Center"
+        }
     }
 ]
